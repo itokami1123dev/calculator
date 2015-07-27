@@ -23,20 +23,20 @@
 
 2. Wikiで逆ポーランド記法を簡単に説明　5分
 
-3. 足し算だけの電卓づくり 15分
-   public static void main(String[] args)から起動される
-   classとnewについて
+3. 足し算だけの電卓づくり 15分  
+   public static void main(String[] args)       
+   classとnewについて  
 
 4. ifで条件分岐して 掛け算を追加 5分
 
 5. トイレ休憩 5分
 
-6. interface を使って if 文をやめる準備 15分
-   interfaceの定義
-   それをimplementsしたclassの定義
+6. interface を使って if 文をやめる準備 15分  
+   interfaceの定義  
+   それをimplementsしたclassの定義  
    
-7. 6のクラスをマップで保持(ジェネリクスの簡単な説明) 5分
-   private final Map<String, Operator> opetators;
+7. 6のクラスをマップで保持(ジェネリクスの簡単な説明) 5分  
+   private final Map<String, Operator> opetators;  
    
 8. 引き算、割り算など処理の追加 10分
 
