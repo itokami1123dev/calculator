@@ -19,8 +19,6 @@ public class Calculator {
         Deque<Integer> stack = new ArrayDeque<>();
 
         for (String s : input.split("\\s")) {
-            Operator operator = opetators.get(s);
-
             if ("+".equals(s)) {
                 Integer num1 = stack.pop();
                 Integer num2 = stack.pop();
