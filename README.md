@@ -1,5 +1,11 @@
-# calculator
-study example calculator
+# Java初心者勉強会
+
+## 日時
+2015/08/07(金) 19:30-21:00
+
+## 内容
+
+文字列を計算する電卓作成ハンズオン
 
 ```
 1 2 + = 3 
@@ -11,3 +17,30 @@ study example calculator
 1 2 3 * + 10 10 * + = 107 
 1 2 3 * - 10 10 * - = -105 
 ```
+
+## 進行
+1. 開場、挨拶、会社紹介 10分
+
+2. Wikiで逆ポーランド記法を簡単に説明　5分
+
+3. 足し算だけの電卓づくり 15分
+   public static void main(String[] args)から起動される
+   classとnewについて
+
+4. ifで条件分岐して 掛け算を追加 5分
+
+5. トイレ休憩 5分
+
+6. interface を使って if 文をやめる準備 15分
+   interfaceの定義
+   それをimplementsしたclassの定義
+   
+7. 6のクラスをマップで保持(ジェネリクスの簡単な説明) 5分
+   private final Map<String, Operator> opetators;
+   
+8. 引き算、割り算など処理の追加 10分
+
+9. まとめと終わりの挨拶 5分
+
+## 参加者条件
+・Java1.8の開発環境の入ったノートPCを用意できること

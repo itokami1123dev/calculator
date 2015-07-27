@@ -15,6 +15,32 @@ public class Calculator {
         opetators.put(Div.tag, new Div());
     }
 
+    public int executeOld(String input) {
+        Deque<Integer> stack = new ArrayDeque<>();
+
+        for (String s : input.split("\\s")) {
+            Operator operator = opetators.get(s);
+
+            if ("+".equals(s)) {
+                Integer num1 = stack.pop();
+                Integer num2 = stack.pop();
+                stack.push(Integer.valueOf(num1 + num2));
+
+            } else if ("*".equals(s)) {
+                Integer num1 = stack.pop();
+                Integer num2 = stack.pop();
+                stack.push(Integer.valueOf(num1 * num2));
+
+            } else {
+                stack.push(Integer.valueOf(s));
+
+            }
+
+        }
+
+        return stack.pop();
+    }
+
     public int execute(String input) {
         Deque<Integer> stack = new ArrayDeque<>();
 
@@ -35,4 +61,5 @@ public class Calculator {
 
         return stack.pop();
     }
+
 }
