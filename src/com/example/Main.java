@@ -1,16 +1,20 @@
 package com.example;
 
+import com.example.operator.*;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main {
 
     public static void main(String... args) {
-        Calculator cal = new Calculator();
 
-        System.out.println("-----------------------");
-
-        System.out.format("%s = %d \n", "1 2 +", cal.executeOld("1 2 +"));
-        System.out.format("%s = %d \n", "1 2 3 * +", cal.executeOld("1 2 3 * +"));
-
-        System.out.println("-----------------------");
+        Map<String, Operator> opetators = new HashMap<>();
+        opetators.put(Add.tag, new Add());
+        opetators.put(Sub.tag, new Sub());
+        opetators.put(Multi.tag, new Multi());
+        opetators.put(Div.tag, new Div());
+        Calculator cal = new Calculator(opetators);
 
         String[] tests = {
                 "1 2 +",

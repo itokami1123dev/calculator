@@ -7,36 +7,8 @@ import java.util.*;
 public class Calculator {
     private final Map<String, Operator> opetators;
 
-    public Calculator() {
-        opetators = new HashMap<>();
-        opetators.put(Add.tag, new Add());
-        opetators.put(Sub.tag, new Sub());
-        opetators.put(Multi.tag, new Multi());
-        opetators.put(Div.tag, new Div());
-    }
-
-    public int executeOld(String input) {
-        Deque<Integer> stack = new ArrayDeque<>();
-
-        for (String s : input.split("\\s")) {
-            if ("+".equals(s)) {
-                Integer num1 = stack.pop();
-                Integer num2 = stack.pop();
-                stack.push(Integer.valueOf(num1 + num2));
-
-            } else if ("*".equals(s)) {
-                Integer num1 = stack.pop();
-                Integer num2 = stack.pop();
-                stack.push(Integer.valueOf(num1 * num2));
-
-            } else {
-                stack.push(Integer.valueOf(s));
-
-            }
-
-        }
-
-        return stack.pop();
+    public Calculator(Map<String, Operator> opetators) {
+        this.opetators = opetators;
     }
 
     public int execute(String input) {
